@@ -1,0 +1,35 @@
+<div class="container">
+    <h1> you want to find employee data you can search by name or by city.</h1>
+
+    <div class="row">
+
+                <div class="col-xs-8">
+                    <input type="text" class="input-lg" placeholder="search employee here" ng-model="query" />
+                </div>
+
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>PhoneNo</th>
+            <th>City</th>
+            <th>address_line1</th>
+            <th>address_line2</th>
+            <th>postalCode</th>
+            </thead>
+            <tr data-ng-repeat="Emp in EmpList | filter: search" ng-click="BindSelectedData(Emp)">
+                <td>{{ Emp.Id }}</td>
+                <td>{{ Emp.name }}</td>
+                <td>{{ Emp.phone | hidenumber }}</td>
+                <td>{{ Emp.address.city }}</td>
+                <td>{{ Emp.address.address_line1 }}</td>
+                <td>{{ Emp.address.address_line2 }}</td>
+                <td>{{ Emp.address.postalCode }}</td>
+
+            </tr>
+        </table>
+    </div>
+
+</div>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ansh Test</title>
+
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="./app.js"></script>
+    <script src="./component/EmployeeList/employeeList.js"></script>
+    <script src="./component/EmployeeSearch/employeeSearch.js"></script>
+    <script src="./component/AddEmployee/addEmployee.js"></script>
+   <script src="./service/dataGetService.js"></script>
+    <script src="./filter/hidenumber.js"></script>
+</head>
+<body ng-app="app">
+            <div class="container">
+            <div class="row">
+                <div class="col-md-4" ui-sref="employeeList">Employe List</div>
+                <div class="col-md-4" ui-sref="employeeSearch">serach Employee</div>
+                <div class="col-md-4" ui-sref="addEmployee">Add Employyee detail</div>
+            </div>
+                <div class="row">
+                    <div ui-view> </div>
+                </div>
+
+            </div>
+</body>
+</html>
